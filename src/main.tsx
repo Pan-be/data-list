@@ -6,8 +6,23 @@ interface Props {
 }
 
 class App extends React.Component<Props> {
+	state = { counter: 0 }
+
+	onUp = (): void => {
+		this.setState({ counter: this.state.counter + 1 })
+	}
+	onDown = (): void => {
+		this.setState({ counter: this.state.counter - 1 })
+	}
+
 	render() {
-		return <div>{this.props.color}</div>
+		return (
+			<div>
+				<button onClick={this.onUp}>+</button>
+				{this.state.counter}
+				<button onClick={this.onDown}>-</button>
+			</div>
+		)
 	}
 }
 
