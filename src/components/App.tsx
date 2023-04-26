@@ -9,7 +9,11 @@ interface AppProps {
 }
 
 export class _App extends React.Component<AppProps> {
+	componentsDidMount() {
+		this.props.fetchTodos()
+	}
 	render() {
+		console.log(this.props.todos)
 		return <div>Test</div>
 	}
 }
