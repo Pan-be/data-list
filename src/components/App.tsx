@@ -14,7 +14,7 @@ export class _App extends React.Component<AppProps> {
 	}
 	render() {
 		console.log(this.props.todos)
-		return <div>Test</div>
+		return <div>Something</div>
 	}
 }
 
